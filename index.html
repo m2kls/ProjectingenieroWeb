@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProjectIngeniero | Noticias científicas</title>
+  <meta name="description" content="Noticias científicas, historias y descubrimientos para la comunidad de ProjectIngeniero." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#" class="brand" aria-label="Inicio ProjectIngeniero">
+        <img class="brand-avatar" src="https://unavatar.io/instagram/projectingeniero" alt="Perfil de Instagram de @projectingeniero" loading="eager" />
+        <div>
+          <strong>ProjectIngeniero</strong>
+          <span>@projectingeniero</span>
+        </div>
+      </a>
+      <button class="menu-btn" aria-label="Abrir menú">☰</button>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#noticias">Noticias</a>
+        <a href="#historias">Historias</a>
+        <a href="#descubrimientos">Descubrimientos</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container reveal">
+      <p class="tag">Actualizado cada semana</p>
+      <h1>Ciencia clara, visual y potente para tu audiencia.</h1>
+      <p class="lead">Portal editorial para ProjectIngeniero inspirado en medios de referencia, totalmente adaptado a móvil y listo para publicar contenido real desde hoy.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#noticias">Leer noticias</a>
+        <a class="btn btn-ghost" href="https://instagram.com/projectingeniero" target="_blank" rel="noopener noreferrer">Ir a Instagram</a>
+      </div>
+    </section>
+
+    <section id="noticias" class="container section-block">
+      <div class="section-head reveal">
+        <h2>Primeras noticias publicadas</h2>
+        <input id="searchNews" type="search" placeholder="Buscar noticia..." aria-label="Buscar noticia">
+      </div>
+      <div class="filters reveal" role="tablist" aria-label="Filtrar por categoría">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="espacio">Espacio</button>
+        <button class="filter-btn" data-filter="salud">Salud</button>
+        <button class="filter-btn" data-filter="energia">Energía</button>
+      </div>
+
+      <div id="newsGrid" class="news-grid">
+        <article class="news-card reveal" data-category="espacio">
+          <span class="pill">Espacio</span>
+          <h3>Starship y el nuevo enfoque de lanzamientos reutilizables</h3>
+          <p>El avance de cohetes de alta cadencia está cambiando los tiempos de prueba y despliegue en la industria aeroespacial.</p>
+          <a href="#" aria-label="Leer más sobre Starship">Leer más</a>
+        </article>
+        <article class="news-card reveal" data-category="salud">
+          <span class="pill">Salud</span>
+          <h3>Edición genética de precisión: avances en terapias CRISPR</h3>
+          <p>Nuevas técnicas mejoran la seguridad en edición de genes y abren puerta a tratamientos más personalizados.</p>
+          <a href="#" aria-label="Leer más sobre CRISPR">Leer más</a>
+        </article>
+        <article class="news-card reveal" data-category="energia">
+          <span class="pill">Energía</span>
+          <h3>Baterías de estado sólido entran en fase precomercial</h3>
+          <p>Más densidad energética y mayor seguridad: el próximo salto para movilidad eléctrica y almacenamiento.</p>
+          <a href="#" aria-label="Leer más sobre baterías">Leer más</a>
+        </article>
+        <article class="news-card reveal hidden-news" data-category="espacio">
+          <span class="pill">Espacio</span>
+          <h3>Telescopios de nueva generación y búsqueda de exoplanetas</h3>
+          <p>La combinación de sensores avanzados e IA acelera la identificación de planetas potencialmente habitables.</p>
+          <a href="#" aria-label="Leer más sobre exoplanetas">Leer más</a>
+        </article>
+        <article class="news-card reveal hidden-news" data-category="salud">
+          <span class="pill">Salud</span>
+          <h3>Nanomedicina contra tumores: resultados prometedores</h3>
+          <p>Se estudian nanopartículas capaces de entregar fármacos de forma más selectiva y reducir efectos adversos.</p>
+          <a href="#" aria-label="Leer más sobre nanomedicina">Leer más</a>
+        </article>
+      </div>
+      <button id="loadMore" class="btn btn-primary load-more">Cargar más noticias</button>
+    </section>
+
+    <section id="historias" class="container cards-section">
+      <div class="section-head reveal">
+        <h2>Historias científicas</h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <span>Biotecnología</span>
+          <h3>De un garaje al laboratorio universitario</h3>
+          <p>Cómo una comunidad maker impulsó un proyecto de bioingeniería con impacto real.</p>
+        </article>
+        <article class="card reveal">
+          <span>Espacio</span>
+          <h3>El camino de una ingeniera de satélites</h3>
+          <p>Disciplina, curiosidad y trabajo en equipo detrás de una misión de observación terrestre.</p>
+        </article>
+        <article class="card reveal">
+          <span>IA</span>
+          <h3>Cuando los datos salvan vidas</h3>
+          <p>Modelos predictivos están ayudando a detectar riesgo clínico de forma temprana.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="descubrimientos" class="container discover reveal">
+      <h2>Descubrimientos destacados</h2>
+      <div class="discover-grid">
+        <article>
+          <h3>Materiales autorreparables</h3>
+          <p>Polímeros inteligentes que prolongan la vida útil de componentes electrónicos.</p>
+        </article>
+        <article>
+          <h3>Algas para captura de CO₂</h3>
+          <p>Sistemas de biorreactores modulares para industria pesada.</p>
+        </article>
+        <article>
+          <h3>Chips neuromórficos eficientes</h3>
+          <p>Arquitecturas inspiradas en el cerebro para reducir consumo energético en IA.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="newsletter" class="container newsletter reveal">
+      <h2>Recibe tu resumen semanal</h2>
+      <p>Déjanos tu correo y te enviamos las mejores noticias científicas.</p>
+      <form id="newsletterForm">
+        <input id="emailInput" type="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+      <small id="formMessage" aria-live="polite"></small>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> ProjectIngeniero · Ciencia para mentes curiosas.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
