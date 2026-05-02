@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProjectIngeniero | Ciencia, historias y descubrimientos</title>
+  <meta name="description" content="Noticias científicas, historias y descubrimientos explicados de forma visual por ProjectIngeniero." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#" class="brand" aria-label="Inicio ProjectIngeniero">
+        <img class="brand-avatar" src="https://unavatar.io/instagram/projectingeniero" alt="Perfil de Instagram de @projectingeniero" loading="eager" />
+        <div>
+          <strong>ProjectIngeniero</strong>
+          <span>@projectingeniero</span>
+        </div>
+      </a>
+      <button class="menu-btn" aria-label="Abrir menú">☰</button>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#noticias">Noticias</a>
+        <a href="#historias">Historias</a>
+        <a href="#descubrimientos">Descubrimientos</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container reveal">
+      <p class="tag">Ciencia explicada para todos</p>
+      <h1>Noticias científicas, historias humanas y descubrimientos que cambian el mundo.</h1>
+      <p class="lead">Una portada moderna inspirada en medios tech, optimizada para móvil y diseñada con los colores de tu marca: blanco, azul y negro.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#noticias">Ver portada</a>
+        <a class="btn btn-ghost" href="https://instagram.com/projectingeniero" target="_blank" rel="noopener noreferrer">Seguir en Instagram</a>
+      </div>
+    </section>
+
+    <section id="noticias" class="container grid-layout">
+      <article class="headline-card reveal">
+        <span class="pill">Portada</span>
+        <h2>Cómo la IA acelera la detección de exoplanetas habitables</h2>
+        <p>Modelos entrenados con miles de curvas de luz están reduciendo de años a semanas la búsqueda de mundos similares a la Tierra.</p>
+      </article>
+
+      <aside class="trending reveal">
+        <h3>Tendencias</h3>
+        <ul>
+          <li><a href="#">Baterías de estado sólido: ¿fin de la ansiedad por autonomía?</a></li>
+          <li><a href="#">El telescopio más grande de Chile entra en fase final</a></li>
+          <li><a href="#">Nanomedicina para tratar tumores de forma selectiva</a></li>
+          <li><a href="#">Materiales autorreparables inspirados en la piel</a></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="historias" class="container cards-section">
+      <div class="section-head reveal">
+        <h2>Historias científicas</h2>
+        <a href="#">Ver todas</a>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <span>Biotecnología</span>
+          <h3>La científica que convirtió residuos en bioplástico</h3>
+          <p>Una historia de laboratorio, fracaso y perseverancia que hoy reduce toneladas de desechos.</p>
+        </article>
+        <article class="card reveal">
+          <span>Espacio</span>
+          <h3>Un ingeniero latino en la misión que estudia Marte</h3>
+          <p>Desde su infancia curiosa hasta liderar sistemas de navegación interplanetaria.</p>
+        </article>
+        <article class="card reveal">
+          <span>Salud</span>
+          <h3>La carrera por vacunas universales</h3>
+          <p>Qué hay detrás de la investigación para inmunizar frente a múltiples variantes a la vez.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="descubrimientos" class="container discover reveal">
+      <h2>Descubrimientos destacados</h2>
+      <div class="discover-grid">
+        <article>
+          <h3>Superconductor a presión ambiente (prototipo)</h3>
+          <p>Nuevos compuestos prometen transmisión eléctrica más eficiente para redes urbanas.</p>
+        </article>
+        <article>
+          <h3>Algas que capturan CO₂ industrial</h3>
+          <p>Una solución modular para chimeneas de fábricas con alto impacto potencial.</p>
+        </article>
+        <article>
+          <h3>Chip neuromórfico de ultra bajo consumo</h3>
+          <p>Procesa visión en tiempo real con una fracción de energía de chips tradicionales.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="newsletter" class="container newsletter reveal">
+      <h2>Recibe la dosis semanal de ciencia</h2>
+      <p>Resumen con lo más importante en menos de 5 minutos.</p>
+      <form>
+        <input type="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> ProjectIngeniero · Ciencia para mentes curiosas.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
