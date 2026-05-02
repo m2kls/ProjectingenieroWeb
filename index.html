@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProjectIngeniero | Ciencia, historias y descubrimientos</title>
-  <meta name="description" content="Noticias científicas, historias y descubrimientos explicados de forma visual por ProjectIngeniero." />
+  <title>ProjectIngeniero | Noticias científicas</title>
+  <meta name="description" content="Noticias científicas, historias y descubrimientos para la comunidad de ProjectIngeniero." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -32,53 +32,81 @@
 
   <main>
     <section class="hero container reveal">
-      <p class="tag">Ciencia explicada para todos</p>
-      <h1>Noticias científicas, historias humanas y descubrimientos que cambian el mundo.</h1>
-      <p class="lead">Una portada moderna inspirada en medios tech, optimizada para móvil y diseñada con los colores de tu marca: blanco, azul y negro.</p>
+      <p class="tag">Actualizado cada semana</p>
+      <h1>Ciencia clara, visual y potente para tu audiencia.</h1>
+      <p class="lead">Portal editorial para ProjectIngeniero inspirado en medios de referencia, totalmente adaptado a móvil y listo para publicar contenido real desde hoy.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#noticias">Ver portada</a>
-        <a class="btn btn-ghost" href="https://instagram.com/projectingeniero" target="_blank" rel="noopener noreferrer">Seguir en Instagram</a>
+        <a class="btn btn-primary" href="#noticias">Leer noticias</a>
+        <a class="btn btn-ghost" href="https://instagram.com/projectingeniero" target="_blank" rel="noopener noreferrer">Ir a Instagram</a>
       </div>
     </section>
 
-    <section id="noticias" class="container grid-layout">
-      <article class="headline-card reveal">
-        <span class="pill">Portada</span>
-        <h2>Cómo la IA acelera la detección de exoplanetas habitables</h2>
-        <p>Modelos entrenados con miles de curvas de luz están reduciendo de años a semanas la búsqueda de mundos similares a la Tierra.</p>
-      </article>
+    <section id="noticias" class="container section-block">
+      <div class="section-head reveal">
+        <h2>Primeras noticias publicadas</h2>
+        <input id="searchNews" type="search" placeholder="Buscar noticia..." aria-label="Buscar noticia">
+      </div>
+      <div class="filters reveal" role="tablist" aria-label="Filtrar por categoría">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="espacio">Espacio</button>
+        <button class="filter-btn" data-filter="salud">Salud</button>
+        <button class="filter-btn" data-filter="energia">Energía</button>
+      </div>
 
-      <aside class="trending reveal">
-        <h3>Tendencias</h3>
-        <ul>
-          <li><a href="#">Baterías de estado sólido: ¿fin de la ansiedad por autonomía?</a></li>
-          <li><a href="#">El telescopio más grande de Chile entra en fase final</a></li>
-          <li><a href="#">Nanomedicina para tratar tumores de forma selectiva</a></li>
-          <li><a href="#">Materiales autorreparables inspirados en la piel</a></li>
-        </ul>
-      </aside>
+      <div id="newsGrid" class="news-grid">
+        <article class="news-card reveal" data-category="espacio">
+          <span class="pill">Espacio</span>
+          <h3>Starship y el nuevo enfoque de lanzamientos reutilizables</h3>
+          <p>El avance de cohetes de alta cadencia está cambiando los tiempos de prueba y despliegue en la industria aeroespacial.</p>
+          <a href="#" aria-label="Leer más sobre Starship">Leer más</a>
+        </article>
+        <article class="news-card reveal" data-category="salud">
+          <span class="pill">Salud</span>
+          <h3>Edición genética de precisión: avances en terapias CRISPR</h3>
+          <p>Nuevas técnicas mejoran la seguridad en edición de genes y abren puerta a tratamientos más personalizados.</p>
+          <a href="#" aria-label="Leer más sobre CRISPR">Leer más</a>
+        </article>
+        <article class="news-card reveal" data-category="energia">
+          <span class="pill">Energía</span>
+          <h3>Baterías de estado sólido entran en fase precomercial</h3>
+          <p>Más densidad energética y mayor seguridad: el próximo salto para movilidad eléctrica y almacenamiento.</p>
+          <a href="#" aria-label="Leer más sobre baterías">Leer más</a>
+        </article>
+        <article class="news-card reveal hidden-news" data-category="espacio">
+          <span class="pill">Espacio</span>
+          <h3>Telescopios de nueva generación y búsqueda de exoplanetas</h3>
+          <p>La combinación de sensores avanzados e IA acelera la identificación de planetas potencialmente habitables.</p>
+          <a href="#" aria-label="Leer más sobre exoplanetas">Leer más</a>
+        </article>
+        <article class="news-card reveal hidden-news" data-category="salud">
+          <span class="pill">Salud</span>
+          <h3>Nanomedicina contra tumores: resultados prometedores</h3>
+          <p>Se estudian nanopartículas capaces de entregar fármacos de forma más selectiva y reducir efectos adversos.</p>
+          <a href="#" aria-label="Leer más sobre nanomedicina">Leer más</a>
+        </article>
+      </div>
+      <button id="loadMore" class="btn btn-primary load-more">Cargar más noticias</button>
     </section>
 
     <section id="historias" class="container cards-section">
       <div class="section-head reveal">
         <h2>Historias científicas</h2>
-        <a href="#">Ver todas</a>
       </div>
       <div class="cards">
         <article class="card reveal">
           <span>Biotecnología</span>
-          <h3>La científica que convirtió residuos en bioplástico</h3>
-          <p>Una historia de laboratorio, fracaso y perseverancia que hoy reduce toneladas de desechos.</p>
+          <h3>De un garaje al laboratorio universitario</h3>
+          <p>Cómo una comunidad maker impulsó un proyecto de bioingeniería con impacto real.</p>
         </article>
         <article class="card reveal">
           <span>Espacio</span>
-          <h3>Un ingeniero latino en la misión que estudia Marte</h3>
-          <p>Desde su infancia curiosa hasta liderar sistemas de navegación interplanetaria.</p>
+          <h3>El camino de una ingeniera de satélites</h3>
+          <p>Disciplina, curiosidad y trabajo en equipo detrás de una misión de observación terrestre.</p>
         </article>
         <article class="card reveal">
-          <span>Salud</span>
-          <h3>La carrera por vacunas universales</h3>
-          <p>Qué hay detrás de la investigación para inmunizar frente a múltiples variantes a la vez.</p>
+          <span>IA</span>
+          <h3>Cuando los datos salvan vidas</h3>
+          <p>Modelos predictivos están ayudando a detectar riesgo clínico de forma temprana.</p>
         </article>
       </div>
     </section>
@@ -87,27 +115,28 @@
       <h2>Descubrimientos destacados</h2>
       <div class="discover-grid">
         <article>
-          <h3>Superconductor a presión ambiente (prototipo)</h3>
-          <p>Nuevos compuestos prometen transmisión eléctrica más eficiente para redes urbanas.</p>
+          <h3>Materiales autorreparables</h3>
+          <p>Polímeros inteligentes que prolongan la vida útil de componentes electrónicos.</p>
         </article>
         <article>
-          <h3>Algas que capturan CO₂ industrial</h3>
-          <p>Una solución modular para chimeneas de fábricas con alto impacto potencial.</p>
+          <h3>Algas para captura de CO₂</h3>
+          <p>Sistemas de biorreactores modulares para industria pesada.</p>
         </article>
         <article>
-          <h3>Chip neuromórfico de ultra bajo consumo</h3>
-          <p>Procesa visión en tiempo real con una fracción de energía de chips tradicionales.</p>
+          <h3>Chips neuromórficos eficientes</h3>
+          <p>Arquitecturas inspiradas en el cerebro para reducir consumo energético en IA.</p>
         </article>
       </div>
     </section>
 
     <section id="newsletter" class="container newsletter reveal">
-      <h2>Recibe la dosis semanal de ciencia</h2>
-      <p>Resumen con lo más importante en menos de 5 minutos.</p>
-      <form>
-        <input type="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
+      <h2>Recibe tu resumen semanal</h2>
+      <p>Déjanos tu correo y te enviamos las mejores noticias científicas.</p>
+      <form id="newsletterForm">
+        <input id="emailInput" type="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
         <button type="submit">Suscribirme</button>
       </form>
+      <small id="formMessage" aria-live="polite"></small>
     </section>
   </main>
 
